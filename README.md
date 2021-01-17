@@ -9,3 +9,4 @@
   * [5_1차원_배열 답](https://github.com/imgzon3/baekjoon/tree/main/1_단계별학습/5_1차원_배열)
   * [6_함수 답](https://github.com/imgzon3/baekjoon/tree/main/1_단계별학습/6_함수)
   * [7_문자열 답](https://github.com/imgzon3/baekjoon/tree/main/1_단계별학습/7_문자열)
+  * [8_기본수학_1 답](https://github.com/imgzon3/baekjoon/tree/main/1_단계별학습/8_기본_수학_1)
