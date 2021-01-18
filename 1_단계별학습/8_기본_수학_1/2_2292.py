@@ -5,11 +5,9 @@ n = int(input()) # 숫자 입력
 total = 1 
 plus = 6
 count = 1
-if n == 1:
-    print(1)
-else:
-    while n >= total:
-        total += plus
-        plus += 6
-        count +=1
-    print(count)
+
+while n > total:
+    total += plus
+    plus += 6
+    count +=1
+print(count)
