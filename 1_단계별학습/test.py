@@ -1,3 +1,7 @@
-a = [5, 6, 7]
-a.remove(5)
-print(a)
+# import math
+
+# a = 10
+# print(int(math.sqrt(a)))
+
+a = 10
+print(int(a**0.5))
