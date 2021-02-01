@@ -1,3 +1,4 @@
+m = int(input())
 n = int(input()) # m 이상n 이하의 자연수 에서 소수 찾기
 
 num = [True for i in range(n + 1)] # 소수 판단 bool list
