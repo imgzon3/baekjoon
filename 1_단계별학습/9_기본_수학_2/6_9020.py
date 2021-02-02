@@ -1,4 +1,4 @@
-num = int(input())
+n = int(input())
 
 limit = 10000 # 10000까지의 소수 구하기
 
@@ -14,6 +14,14 @@ for i in range(2, int(limit**0.5) + 1): # 남은 수 중 아직 처리하지 않
     
 result = [i for i in range(2, limit+1) if num[i]] # limit 까지의 소수 리스트
 
-for _ in num:
+for _ in range(n):
     n = int(input()) # 주어지는 짝수
     
+    a = n // 2
+    b = a
+    for _ in range(10000):
+        if num[a] and num[b]:
+            print(a, b)
+            break
+        a -= 1
+        b += 1
