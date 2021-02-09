@@ -1,15 +1,29 @@
-m = int(input())
-n = int(input()) # m 이상n 이하의 자연수 에서 소수 찾기
+import numpy as np
 
-num = [True for i in range(n + 1)] # 소수 판단 bool list
-
-for i in range(2, int(n**0.5) + 1): # 남은 수 중 아직 처리하지 않은 i
-    if num[i] == True:
-        j = 2
-        while i*j <= n:
-            num[i*j] = False # i의 배수 모두 제거
-            j += 1
-            
-result = [i for i in range(2, n+1) if num[i]] # m, n 사이의 소수 리스트
-
-print(len(result))
+if __name__ == "__main__":
+    # a = np.full((3, 3), 0)
+    # b = np.full((3, 3) ,1)
+    # c = np.append(a, b, axis=1)
+    # print(c)
+    
+    x = np.full((1, 1), 1)
+    # x[1][1] = 0
+    
+    one = np.append(x, x, axis=1)
+    one = np.append(one, x, axis=1)
+    
+    tmp = np.full(x.shape, 0)
+    two = np.append(x, tmp, axis=1)
+    two = np.append(two, x, axis=1)
+    
+    result = np.append(one, two, axis=0)
+    result = np.append(result, one, axis=0)
+    
+    # print(result)
+    
+    a = np.array(range(8)).reshape(2, 4)
+    for i in a:
+        tmp = ''
+        for k in i:
+            tmp += str(k)
+        print(tmp)
