@@ -1,4 +1,6 @@
-import numpy as np # 답은 맞으나, 백준은 numpy를 지원하지 않는다
+# 답은 맞으나, 백준은 numpy를 지원하지 않는다
+'''
+import numpy as np
 
 def stars(num:int, x:np)->np:
     """[별찍기 재귀함수]
@@ -33,3 +35,25 @@ if __name__ == "__main__":
             elif k == 0:
                 line += ' '
         print(line)
+'''
+
+# numpy없이
+def star(n: int, x: list)-> list:
+    out = [] # 한번 처리한 값
+    if n == 3:
+        return x
+    else:
+        for i in x: # 위에 처음 3개의 구역
+            out.append(i*3)
+        for i in x: # 가운데 3개의 구역 (중앙 비어있음)
+            out.append(i+' '*len(x)+i)
+        for i in x: # 마지막 3개의 구역
+            out.append(i*3)
+        return star(n//3, out)
+
+if __name__ == "__main__":
+    n = int(input())
+    first = ['***', '* *', '***']
+    final = star(n, first)
+    for i in final:
+        print(i)
