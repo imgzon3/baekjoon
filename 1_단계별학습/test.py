@@ -1,7 +1,3 @@
-a = 216
-b = 0
-for i in str(a):
-    b += int(i)
-print(b)
-b += a
-print(b)
+tmp = [[3, 15], [1, 78], [5, 51], [2, 321]]
+tmp.sort(key=lambda x : x[0])
+print(tmp)
