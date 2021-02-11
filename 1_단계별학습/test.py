@@ -1,5 +1,7 @@
-tmp = []
-tmp2 = ['***', '* *', '***']
-for i in tmp2:
-    tmp.append(i+' '*len(tmp2)+i)
-print(tmp)
+a = 216
+b = 0
+for i in str(a):
+    b += int(i)
+print(b)
+b += a
+print(b)
