@@ -1,3 +1,8 @@
+# 무언가 고려하지 않은 반례가 있을 것
+# 이 문제는 오히려 좀 더 무거워지더라도
+# 단순히 666에서 1을 다음수에 '666'이 포함될때 까지 더하도록 만들면
+# 해결될 문제이다
+'''
 n = int(input())
 
 front = 0 # 앞에 들어가는 숫자
@@ -40,3 +45,14 @@ else:
         print(str(front)+'6'+str(extra))
     elif status == 1000:
         print(str(front)+str(extra))
+'''
+n = int(input())
+cnt = 0
+six_n = 666
+while True:
+    if '666' in str(six_n):
+        cnt += 1
+    if cnt == n:
+        print(six_n)
+        break
+    six_n += 1
