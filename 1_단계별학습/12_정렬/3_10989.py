@@ -3,13 +3,16 @@
 '''
 import sys
 
-def count_sort(arr: list, size: int, max: int):
-    count = [0 for _ in range(max+1)]
+def count_sort():
+    count = [0 for _ in range(10001)]
     
-    for i in arr:
-        count[i] += 1
+    n = int(input())
+    for i in range(n):
+        count[int(sys.stdin.readline())] += 1
     
     for idx, i in enumerate(count):
-        if i!=0:
-            for k in range(i):
-                sys.stdout.write(str(idx)+'\n')
+        for _ in range(i):
+            sys.stdout.write(str(idx)+'\n')
+
+if __name__ == '__main__':
+    count_sort()
