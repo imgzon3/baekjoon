@@ -1,3 +1,2 @@
-n = int(input())
-for _ in range(n):
-    print(n)
+n= 10
+print(n)
