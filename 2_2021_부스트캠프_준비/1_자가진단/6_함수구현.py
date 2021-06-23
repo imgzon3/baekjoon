@@ -18,19 +18,36 @@ arr = [3, 2, 4, 4, 2, 5, 2, 5, 5]이면 2가 3회, 4가 2회, 5가 3회 나타�
 '''
 
 def solution(arr: list):
-    count = [0 for i in range(101)] # count 배열, 들어오는 배열의 각각 수만큼의 index에 등장 횟수 입력, 0번째 자리는 비워둠
-    
-    for tmp in arr:
-        count[tmp]+=1
-    
-    result = [] # 결과 값 담을 배열
-    for tmp in count:
-        if tmp > 1:
-            result.append(tmp)
-    
-    if len(result) == 0:
+    count = dict()
+    result = []
+    for i in arr:
+        if i in count:
+            count[i]+=1
+        else:
+            count[i]=1
+    for val in count.values():
+        if val!=1:
+            result.append(val)
+    if len(result)==0:
         result.append(-1)
     return result
+
+
+# # 해당 함수는 숫자가 작은 순으로 보여줌, 문제는 앞에 있는 숫자들 부터를 원함
+# def solution(arr: list):
+#     count = [0 for i in range(101)] # count 배열, 들어오는 배열의 각각 수만큼의 index에 등장 횟수 입력, 0번째 자리는 비워둠
+    
+#     for tmp in arr:
+#         count[tmp]+=1
+    
+#     result = [] # 결과 값 담을 배열
+#     for tmp in count:
+#         if tmp > 1:
+#             result.append(tmp)
+    
+#     if len(result) == 0:
+#         result.append(-1)
+#     return result
 
 if __name__ == "__main__":
     # 1번 예시
@@ -44,3 +61,7 @@ if __name__ == "__main__":
     # 3번 예시
     arr3 = [3, 5, 7, 9, 1]
     print(solution(arr3))
+    
+    # 추가 테스트
+    arr4 = [5, 5, 3, 3, 3, 3, 1, 1]
+    print(solution(arr4))
